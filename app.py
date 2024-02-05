@@ -28,7 +28,8 @@ index_name="medialembeddings"
 index = pc.Index(index_name)
 
 #Loading the index
-#docsearch=Pinecone.from_existing_index(index_name, embeddings)
+from langchain.vectorstores import Pinecone
+docsearch=Pinecone.from_existing_index(index_name, embeddings)
 
 
 PROMPT=PromptTemplate(template=prompt_template, input_variables=["context", "question"])
@@ -40,7 +41,7 @@ llm = ChatGoogleGenerativeAI(model="gemini-pro",google_api_key=GOOGLE_API_KEY,te
 qa=RetrievalQA.from_chain_type(
     llm=llm, 
     chain_type="stuff", 
-    retriever=docsearch.as_retriever(search_kwargs={'k': 2}),
+    retriever=docsearch.as_retriever(search_kwargs={'k': 3}),
     return_source_documents=True, 
     chain_type_kwargs=chain_type_kwargs)
 
