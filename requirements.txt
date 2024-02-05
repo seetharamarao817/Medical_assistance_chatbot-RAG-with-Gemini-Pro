@@ -1,7 +1,9 @@
-openai
 langchain
-streamlit
 python-dotenv
 PyPDF2
+flask 
+pinecone
+pinecone-client
+langchain_google_genai
 
 -e .

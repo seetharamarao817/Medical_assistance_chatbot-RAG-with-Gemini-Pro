@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: Medical-assistance-chatbot
+Version: 0.0.1
+Author: Seetha Rama Rao
+Author-email: akashay8179@gmail.com
+Requires-Dist: langchain
+Requires-Dist: python-dotenv
+Requires-Dist: PyPDF2
